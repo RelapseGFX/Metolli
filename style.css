@@ -127,6 +127,7 @@ ul  { list-style: none; }
 .btn-white-pill {
   background: var(--white);
   color: var(--blue);
+  align-self: flex-start;
   border: none;
   font-weight: 600;
 }
