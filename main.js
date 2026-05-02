@@ -334,23 +334,41 @@ form?.addEventListener('submit', e => {
   const allOk  = fields.map(cfValidate).every(Boolean);
 
   if (!allOk) {
-    /* Scroll first error into view */
     form.querySelector('.has-error')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
   }
 
   const btn  = form.querySelector('button[type=submit]');
   const orig = btn.textContent;
-  btn.textContent      = 'Sent ✓';
-  btn.disabled         = true;
-  btn.style.background = '#16a34a';
-  setTimeout(() => {
-    btn.textContent      = orig;
-    btn.disabled         = false;
-    btn.style.background = '';
-    form.reset();
-    form.querySelectorAll('.has-error').forEach(el => el.classList.remove('has-error'));
-  }, 3500);
+  btn.disabled = true;
+
+  /* POST to Netlify Forms */
+  fetch('/', {
+    method  : 'POST',
+    headers : { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body    : new URLSearchParams(new FormData(form)).toString(),
+  })
+  .then(() => {
+    btn.textContent      = 'Sent ✓';
+    btn.style.background = '#16a34a';
+    setTimeout(() => {
+      btn.textContent      = orig;
+      btn.disabled         = false;
+      btn.style.background = '';
+      form.reset();
+      form.querySelectorAll('.has-error').forEach(el => el.classList.remove('has-error'));
+    }, 3500);
+  })
+  .catch(() => {
+    const lang = localStorage.getItem('mam-lang') || 'de';
+    btn.textContent      = lang === 'de' ? 'Fehler – bitte erneut versuchen' : 'Error – please try again';
+    btn.style.background = '#dc2626';
+    setTimeout(() => {
+      btn.textContent      = orig;
+      btn.disabled         = false;
+      btn.style.background = '';
+    }, 3500);
+  });
 });
 
 /* Live feedback: re-validate on blur, and clear error as soon as field becomes valid */

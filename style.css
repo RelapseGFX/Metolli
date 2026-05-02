@@ -1352,6 +1352,7 @@ ul  { list-style: none; }
   box-shadow: 0 0 0 3px rgba(220,38,38,0.10);
 }
 
+.form-honeypot { display: none; }
 .form-checkbox { margin-top: 4px; }
 .checkbox-label {
   display: flex;
