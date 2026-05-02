@@ -1523,7 +1523,8 @@ ul  { list-style: none; }
   }
   .cta-blue-photo { padding: 48px 32px 0; height: 300px; }
   .cta-blue-img { height: 100%; max-width: 100%; object-fit: cover; }
-  .cta-blue-body { padding: 32px 0 48px; }
+  .cta-blue-body { padding: 32px 0 48px; text-align: center; align-items: center; }
+  .cta-silver-btn { align-self: center; }
 }
 
 @media (max-width: 768px) {
@@ -1568,8 +1569,8 @@ ul  { list-style: none; }
   .cta-blue-layout { grid-template-columns: 1fr; min-height: auto; }
   .cta-blue-photo { padding: 40px 40px 0; height: 260px; }
   .cta-blue-img { height: 100%; max-width: 100%; object-fit: cover; border-radius: 4px 4px 0 0; }
-  .cta-blue-body { padding: 28px 40px 40px; }
-  .cta-silver-btn { align-self: flex-start; }
+  .cta-blue-body { padding: 28px 40px 40px; text-align: center; align-items: center; }
+  .cta-silver-btn { align-self: center; }
 
   /* How it works — allow row to grow, add gap */
   .how-row { height: auto; min-height: 80px; padding: 20px 16px; gap: 16px; }
@@ -1611,7 +1612,8 @@ ul  { list-style: none; }
 
   /* CTA blue body */
   .cta-blue-photo { padding: 32px 20px 0; height: 220px; }
-  .cta-blue-body { padding: 24px 20px 36px; }
+  .cta-blue-body { padding: 24px 20px 36px; text-align: center; align-items: center; }
+  .cta-silver-btn { align-self: center; }
 
   /* Modal */
   .modal-box { padding: 28px 20px; border-radius: 16px; }
