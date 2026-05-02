@@ -320,8 +320,8 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-/* Open on every "Order a service" link */
-document.querySelectorAll('.svc-link').forEach(link => {
+/* Open on every "Order a service" link and hero "Request Service" button */
+document.querySelectorAll('.svc-link, .open-modal').forEach(link => {
   link.addEventListener('click', e => { e.preventDefault(); openModal(); });
 });
 
