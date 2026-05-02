@@ -95,6 +95,8 @@ ul  { list-style: none; }
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 8px;
   padding: 14px 30px;
   border-radius: 300px;
@@ -701,6 +703,7 @@ ul  { list-style: none; }
 .logos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
   gap: 20px;
 }
 
