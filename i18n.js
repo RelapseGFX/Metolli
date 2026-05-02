@@ -155,7 +155,7 @@ const T = {
     'nav.reviews'         : 'Bewertungen',
     'nav.contact'         : 'Kontakt',
     /* HERO */
-    'hero.title'          : 'Heizung Sanitär<br/>Solartechnik Bretten',
+    'hero.title'          : 'Heating, Plumbing, and Solar Technology<br/>in Bretten',
     'hero.subtitle'       : 'Über zwei Jahrzehnte Erfahrung in der Sanitärtechnik',
     'hero.cta1'           : 'Jetzt anrufen',
     'hero.cta2'           : 'Service anfragen',
@@ -517,5 +517,5 @@ function buildSwitcher() {
 
 /* ─── Init ─── */
 buildSwitcher();
-const saved = localStorage.getItem('mam-lang') || 'en';
+const saved = localStorage.getItem('mam-lang') || 'de';
 applyLang(saved);
