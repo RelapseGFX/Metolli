@@ -502,7 +502,7 @@ function buildSwitcher() {
   sw.setAttribute('role', 'group');
   sw.setAttribute('aria-label', 'Language / Sprache');
 
-  ['EN', 'DE'].forEach(code => {
+  ['DE', 'EN'].forEach(code => {
     const btn = document.createElement('button');
     btn.className = 'lang-btn';
     btn.dataset.lang = code.toLowerCase();
