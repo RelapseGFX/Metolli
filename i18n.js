@@ -155,7 +155,7 @@ const T = {
     'nav.reviews'         : 'Bewertungen',
     'nav.contact'         : 'Kontakt',
     /* HERO */
-    'hero.title'          : 'Sanitärinstallationen<br/>in Bretten',
+    'hero.title'          : 'Heizung Sanitär<br/>Solartechnik Bretten',
     'hero.subtitle'       : 'Über zwei Jahrzehnte Erfahrung in der Sanitärtechnik',
     'hero.cta1'           : 'Jetzt anrufen',
     'hero.cta2'           : 'Service anfragen',

@@ -287,3 +287,70 @@ form?.addEventListener('submit', e => {
 const navStyle = document.createElement('style');
 navStyle.textContent = `.nav-links a.active { color: var(--blue); font-weight: 500; }`;
 document.head.appendChild(navStyle);
+
+/* ── SERVICES VIEW ALL TOGGLE ── */
+const viewAllBtn  = document.getElementById('viewAllBtn');
+const extraCards  = document.querySelectorAll('.svc-extra');
+
+viewAllBtn?.addEventListener('click', () => {
+  const isExpanded = viewAllBtn.classList.toggle('expanded');
+  document.querySelector('.services-section')?.classList.toggle('expanded', isExpanded);
+  viewAllBtn.textContent = isExpanded ? 'Show Less' : 'View all Services';
+});
+
+/* ── REVIEW READ MORE TOGGLE ── */
+document.querySelectorAll('.review-more-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.review-card');
+    const isExpanded = card.classList.toggle('expanded');
+    btn.textContent = isExpanded ? 'Show less' : 'Read more';
+  });
+});
+
+/* ── ORDER SERVICE MODAL ── */
+const orderModal  = document.getElementById('orderModal');
+const modalClose  = document.getElementById('modalClose');
+
+function openModal() {
+  orderModal?.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  orderModal?.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+/* Open on every "Order a service" link */
+document.querySelectorAll('.svc-link').forEach(link => {
+  link.addEventListener('click', e => { e.preventDefault(); openModal(); });
+});
+
+modalClose?.addEventListener('click', closeModal);
+
+/* Close on backdrop click */
+orderModal?.addEventListener('click', e => {
+  if (e.target === orderModal) closeModal();
+});
+
+/* Close on Escape */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+/* Modal form submit feedback */
+const modalForm = document.querySelector('.modal-form');
+modalForm?.addEventListener('submit', e => {
+  e.preventDefault();
+  const btn = modalForm.querySelector('button[type=submit]');
+  const orig = btn.textContent;
+  btn.textContent = 'Sent ✓';
+  btn.disabled    = true;
+  btn.style.background = '#16a34a';
+  setTimeout(() => {
+    btn.textContent      = orig;
+    btn.disabled         = false;
+    btn.style.background = '';
+    modalForm.reset();
+    closeModal();
+  }, 2000);
+});
