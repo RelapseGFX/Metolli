@@ -60,9 +60,9 @@ const dots   = document.querySelectorAll('.hero-dots .dot');
 
 // Figma CDN images for the 3 hero slides
 const heroSlides = [
-  "https://www.figma.com/api/mcp/asset/6e9b151b-385c-4859-ae85-0b4816d2dd3d",
-  "https://www.figma.com/api/mcp/asset/3c6ad5fe-cbf2-42bb-aec3-d100d61d4cad",
-  "https://www.figma.com/api/mcp/asset/d9d9f7d7-95ce-4a41-827c-54c958855d2a",
+  "assets/6e9b151b-385c-4859-ae85-0b4816d2dd3d.jpg",
+  "assets/3c6ad5fe-cbf2-42bb-aec3-d100d61d4cad.jpg",
+  "assets/d9d9f7d7-95ce-4a41-827c-54c958855d2a.jpg",
 ];
 
 let heroIdx = 0;
