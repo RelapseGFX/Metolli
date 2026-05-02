@@ -1327,6 +1327,31 @@ ul  { list-style: none; }
   pointer-events: none;
 }
 
+/* Required asterisk */
+.form-field label .req { color: #dc2626; margin-left: 1px; }
+
+/* Inline error messages */
+.field-error {
+  display: none;
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: -2px;
+}
+.form-field.has-error .field-error,
+.form-checkbox.has-error .field-error { display: block; }
+
+/* Error border on fields */
+.form-field.has-error input,
+.form-field.has-error select,
+.form-field.has-error textarea {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220,38,38,0.10);
+}
+.form-field.has-error .phone-row {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220,38,38,0.10);
+}
+
 .form-checkbox { margin-top: 4px; }
 .checkbox-label {
   display: flex;
@@ -1338,6 +1363,7 @@ ul  { list-style: none; }
 }
 .checkbox-label input[type=checkbox] { margin-top: 2px; accent-color: var(--blue); flex-shrink: 0; }
 .checkbox-label a { color: var(--blue); }
+.form-checkbox.has-error .checkbox-label { color: #dc2626; }
 
 /* ─────────────────────────────────────────────────────────────
    FOOTER  (blue background)

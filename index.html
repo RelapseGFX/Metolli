@@ -910,29 +910,32 @@
       <form class="contact-form" novalidate>
         <div class="form-row">
           <div class="form-field">
-            <label for="cf-name">Full Name</label>
-            <input type="text" id="cf-name" name="name" placeholder="John Doe" />
+            <label for="cf-name">Full Name <span class="req">*</span></label>
+            <input type="text" id="cf-name" name="name" placeholder="John Doe" required autocomplete="name" />
+            <span class="field-error" aria-live="polite"></span>
           </div>
         </div>
         <div class="form-row">
           <div class="form-field">
-            <label for="cf-email">Email Address</label>
-            <input type="email" id="cf-email" name="email" placeholder="john@example.com" />
+            <label for="cf-email">Email Address <span class="req">*</span></label>
+            <input type="email" id="cf-email" name="email" placeholder="john@example.com" required autocomplete="email" />
+            <span class="field-error" aria-live="polite"></span>
           </div>
         </div>
         <div class="form-row">
           <div class="form-field">
-            <label id="cf-phone-label">Phone Number</label>
+            <label id="cf-phone-label">Phone Number <span class="req">*</span></label>
             <div class="phone-row">
               <div class="phone-prefix">🇩🇪 +49</div>
-              <input id="cf-phone-input" type="tel" name="phone" placeholder="178 5086146" />
+              <input id="cf-phone-input" type="tel" name="phone" placeholder="178 5086146" required autocomplete="tel" />
             </div>
+            <span class="field-error" aria-live="polite"></span>
           </div>
         </div>
         <div class="form-row">
           <div class="form-field select-wrap">
-            <label for="cf-service">Service Type</label>
-            <select id="cf-service" name="service">
+            <label for="cf-service">Service Type <span class="req">*</span></label>
+            <select id="cf-service" name="service" required>
               <option value="">Select a service</option>
               <option>Heating technology</option>
               <option>Sanitary engineering</option>
@@ -946,19 +949,22 @@
             <span class="select-arrow">
               <svg width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
+            <span class="field-error" aria-live="polite"></span>
           </div>
         </div>
         <div class="form-row">
           <div class="form-field">
-            <label for="cf-message">Message</label>
-            <textarea id="cf-message" name="message" rows="4" placeholder="Describe your issue..."></textarea>
+            <label for="cf-message">Message <span class="req">*</span></label>
+            <textarea id="cf-message" name="message" rows="4" placeholder="Describe your issue..." required minlength="10"></textarea>
+            <span class="field-error" aria-live="polite"></span>
           </div>
         </div>
         <div class="form-checkbox">
           <label class="checkbox-label">
-            <input type="checkbox" name="privacy" required />
+            <input type="checkbox" id="cf-privacy" name="privacy" required />
             <span id="cf-privacy-text">By clicking 'Submit', you agree to our <a href="#">Privacy Policy</a></span>
           </label>
+          <span class="field-error" aria-live="polite"></span>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

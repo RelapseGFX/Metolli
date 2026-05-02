@@ -268,19 +268,101 @@ revealEls.forEach(el => {
 
 /* ── CONTACT FORM ── */
 const form = document.querySelector('.contact-form');
+
+/* Bilingual validation messages */
+function cfMsg(key) {
+  const lang = localStorage.getItem('mam-lang') || 'de';
+  const m = {
+    de: {
+      required   : 'Dieses Feld ist ein Pflichtfeld.',
+      email      : 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+      phone      : 'Bitte geben Sie eine gültige Telefonnummer ein.',
+      msgMin     : 'Die Nachricht muss mindestens 10 Zeichen lang sein.',
+      service    : 'Bitte wählen Sie eine Serviceart aus.',
+      privacy    : 'Bitte stimmen Sie der Datenschutzerklärung zu.',
+    },
+    en: {
+      required   : 'This field is required.',
+      email      : 'Please enter a valid email address.',
+      phone      : 'Please enter a valid phone number.',
+      msgMin     : 'Message must be at least 10 characters.',
+      service    : 'Please select a service type.',
+      privacy    : 'Please accept the privacy policy to continue.',
+    },
+  };
+  return (m[lang] || m.de)[key];
+}
+
+/* Validate a single field — returns true if valid */
+function cfValidate(field) {
+  const wrapper  = field.closest('.form-field') || field.closest('.form-checkbox');
+  const errorEl  = wrapper?.querySelector('.field-error');
+  let   valid    = true;
+  let   msg      = '';
+
+  if (field.type === 'checkbox') {
+    if (!field.checked) { valid = false; msg = cfMsg('privacy'); }
+
+  } else if (!field.value.trim()) {
+    valid = false;
+    msg   = field.name === 'service' ? cfMsg('service') : cfMsg('required');
+
+  } else if (field.type === 'email') {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(field.value)) {
+      valid = false; msg = cfMsg('email');
+    }
+
+  } else if (field.name === 'phone') {
+    if (!/^[\d\s\-()+]{6,}$/.test(field.value.trim())) {
+      valid = false; msg = cfMsg('phone');
+    }
+
+  } else if (field.name === 'message' && field.value.trim().length < 10) {
+    valid = false; msg = cfMsg('msgMin');
+  }
+
+  wrapper?.classList.toggle('has-error', !valid);
+  if (errorEl) errorEl.textContent = msg;
+  return valid;
+}
+
 form?.addEventListener('submit', e => {
   e.preventDefault();
-  const btn = form.querySelector('button[type=submit]');
+
+  /* Validate every interactive field */
+  const fields = [...form.querySelectorAll('input, select, textarea')];
+  const allOk  = fields.map(cfValidate).every(Boolean);
+
+  if (!allOk) {
+    /* Scroll first error into view */
+    form.querySelector('.has-error')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  const btn  = form.querySelector('button[type=submit]');
   const orig = btn.textContent;
-  btn.textContent = 'Sent ✓';
-  btn.disabled    = true;
+  btn.textContent      = 'Sent ✓';
+  btn.disabled         = true;
   btn.style.background = '#16a34a';
   setTimeout(() => {
     btn.textContent      = orig;
     btn.disabled         = false;
     btn.style.background = '';
     form.reset();
+    form.querySelectorAll('.has-error').forEach(el => el.classList.remove('has-error'));
   }, 3500);
+});
+
+/* Live feedback: re-validate on blur, and clear error as soon as field becomes valid */
+form?.querySelectorAll('input, select, textarea').forEach(field => {
+  field.addEventListener('blur',   () => cfValidate(field));
+  field.addEventListener('input',  () => {
+    if (field.closest('.form-field')?.classList.contains('has-error') ||
+        field.closest('.form-checkbox')?.classList.contains('has-error')) {
+      cfValidate(field);
+    }
+  });
+  field.addEventListener('change', () => cfValidate(field));
 });
 
 /* ── INJECT ACTIVE NAV STYLE ── */
