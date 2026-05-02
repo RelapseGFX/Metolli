@@ -155,7 +155,7 @@ const T = {
     'footer.appt'         : 'Appointments often available<br/>same day.',
     'footer.col4'         : 'Connect',
     'footer.copy'         : '© 2024 MAM – All rights reserved.',
-    'footer.made'         : 'Made with ♥ by <strong>Web Prishtina</strong>',
+    'footer.made'         : 'Made with ♥ by <strong><a href="https://prishtinawebdesign.com/" target="_blank" rel="noopener">Web Prishtina</a></strong>',
   },
 
   de: {
@@ -308,7 +308,7 @@ const T = {
     'footer.appt'         : 'Termine oft noch am<br/>selben Tag verfügbar.',
     'footer.col4'         : 'Verbinden',
     'footer.copy'         : '© 2024 MAM – Alle Rechte vorbehalten.',
-    'footer.made'         : 'Mit ♥ gemacht von <strong>Web Prishtina</strong>',
+    'footer.made'         : 'Mit ♥ gemacht von <strong><a href="https://prishtinawebdesign.com/" target="_blank" rel="noopener">Web Prishtina</a></strong>',
   }
 };
 
