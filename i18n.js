@@ -14,7 +14,7 @@ const T = {
     'nav.reviews'         : 'Reviews',
     'nav.contact'         : 'Contact',
     /* HERO */
-    'hero.title'          : 'Plumbing services<br/>in Bretten',
+    'hero.title'          : 'Heating, Plumbing, and Solar Technology<br/>in Bretten',
     'hero.subtitle'       : 'Over two decades of experience in plumbing',
     'hero.cta1'           : 'Call now',
     'hero.cta2'           : 'Request Service',
