@@ -506,8 +506,8 @@ const BINDINGS = [
   ['.footer-col:nth-child(3) li:nth-child(1) a','t', 'footer.start'],
   ['.footer-appointment p',                     'h', 'footer.appt'],
   ['.footer-col:nth-child(4) .footer-col-heading', 't', 'footer.col4'],
-  ['.footer-bar-left span',                     't', 'footer.copy'],
-  ['.footer-bar-right',                         'h', 'footer.made'],
+  ['#footer-made-text',                         'h', 'footer.made'],
+  ['.footer-bar-copy',                          't', 'footer.copy'],
 ];
 
 /* ─── Apply translations ─── */
