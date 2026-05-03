@@ -530,8 +530,8 @@ function applyLang(lang) {
 
   /* Update page title */
   document.title = lang === 'de'
-    ? 'MAM – Sanitär & Heizung'
-    : 'MAM – Plumbing & Heating';
+    ? 'Metolli SHK – Heizung Sanitär Solartechnik Bretten'
+    : 'Metolli SHK – Heating Plumbing Solar Technology Bretten';
 
   /* Persist choice */
   localStorage.setItem('mam-lang', lang);
