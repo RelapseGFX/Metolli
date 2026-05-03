@@ -179,6 +179,15 @@ ul  { list-style: none; }
   align-items: center;
 }
 .nav-logo-link { display: flex; align-items: center; }
+.nav-logo-text {
+  font-family: var(--font-head);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: -0.5px;
+  line-height: 1;
+  text-transform: uppercase;
+}
 
 /* Center zone — expands, links centered */
 .nav-center {
