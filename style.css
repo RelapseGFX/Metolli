@@ -1636,6 +1636,7 @@ ul  { list-style: none; }
   .footer-bar-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
   .footer-bar-left  { flex-direction: column; align-items: flex-start; gap: 8px; }
   .footer-bar-right { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .footer-bar-inner .lang-switcher { align-self: flex-start; }
 
   .projects-carousel-wrap { padding: 0 52px; }
   .project-item { flex: 0 0 280px; }
@@ -1772,39 +1773,33 @@ ul  { list-style: none; }
    LANGUAGE SWITCHER
 ───────────────────────────────────────────────────────────── */
 .lang-switcher {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 9999;
   display: flex;
   align-items: center;
-  background: var(--white);
+  background: rgba(255,255,255,0.10);
   border-radius: 40px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  padding: 4px;
+  padding: 3px;
   gap: 2px;
 }
 
 .lang-btn {
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 36px;
   border: none;
   background: transparent;
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  color: var(--gray);
+  color: rgba(255,255,255,0.50);
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
   line-height: 1;
 }
 
 .lang-btn.active {
-  background: var(--blue);
+  background: rgba(255,255,255,0.20);
   color: var(--white);
 }
 
 .lang-btn:hover:not(.active) {
-  background: var(--card-bg);
-  color: var(--dark);
+  color: rgba(255,255,255,0.80);
 }

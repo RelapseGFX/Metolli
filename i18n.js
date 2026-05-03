@@ -560,7 +560,10 @@ function buildSwitcher() {
     sw.appendChild(btn);
   });
 
-  document.body.appendChild(sw);
+  /* Place inside footer bar, after the existing left/right items */
+  const footerBar = document.querySelector('.footer-bar-inner');
+  if (footerBar) footerBar.appendChild(sw);
+  else document.body.appendChild(sw);
 }
 
 /* ─── Init ─── */
