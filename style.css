@@ -1021,7 +1021,7 @@ ul  { list-style: none; }
   overflow: hidden;
   display: flex;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 
 /* Real map as background layer */
