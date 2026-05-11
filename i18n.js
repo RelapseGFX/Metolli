@@ -57,8 +57,8 @@ const T = {
     'about.badge'         : 'About Us',
     'about.title'         : 'Plumbing you can trust<br/><span class="text-blue">when it matters most</span>',
     'about.stat'          : 'Emergency Service',
-    'about.p1'            : 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.',
-    'about.p2'            : "Don't worry about sounding professional. Sound like you. There are over 1.5 billion websites out there, but your story is what's going to separate this one from the rest. If you read the words back and don't hear your own voice in your head, that's a good sign you still have more work to do.",
+    'about.p1'            : "For us, this work has always been more than just a job like it's been a part of our life for over 20 years. The founder Akil started his career fixing bathrooms and helping people around the neighborhood alongside his brother, learning the trade through real hands-on work and long days on site. Later on in Germany, he continued building his experience and completed his vocational training (Ausbildung) in Heizung · Sanitär · Solartechnik. After spending more than 10 years working for a local company, he decided it was time to start his own business and serve customers in Bretten and the surrounding areas.",
+    'about.p2'            : "Today, we keep things simple: honest work, fair service, clean results, and treating every home like it's our own.",
     /* WHY CHOOSE US */
     'why.badge'           : 'Why Choose Us',
     'why.title'           : 'Why <span class="text-blue">Choose Us</span>',
@@ -229,8 +229,8 @@ const T = {
     'about.badge'         : 'Über uns',
     'about.title'         : 'Sanitärinstallationen, denen Sie vertrauen können<br/><span class="text-blue">wenn es darauf ankommt</span>',
     'about.stat'          : 'Notfalldienst',
-    'about.p1'            : 'Es beginnt alles mit einer Idee. Vielleicht möchten Sie ein Unternehmen gründen. Vielleicht möchten Sie ein Hobby in etwas Größeres verwandeln. Wie auch immer – die Art, wie Sie Ihre Geschichte online erzählen, macht den Unterschied.',
-    'about.p2'            : 'Machen Sie sich keine Sorgen, professionell zu klingen. Klingen Sie wie Sie selbst. Es gibt über 1,5 Milliarden Websites, aber Ihre Geschichte wird diese von den anderen abheben.',
+    'about.p1'            : 'Für uns war diese Arbeit immer mehr als nur ein Beruf – sie ist seit über 20 Jahren ein Teil unseres Lebens. Gründer Akil begann seine Karriere damit, Badezimmer zu renovieren und Menschen in der Nachbarschaft zu helfen, gemeinsam mit seinem Bruder das Handwerk durch echte praktische Arbeit und lange Tage auf der Baustelle zu erlernen. Später in Deutschland baute er seine Erfahrung weiter aus und absolvierte seine Ausbildung in Heizung · Sanitär · Solartechnik. Nach mehr als 10 Jahren in einem lokalen Betrieb entschied er sich, sein eigenes Unternehmen zu gründen und Kunden in Bretten und der Umgebung zu bedienen.',
+    'about.p2'            : 'Heute halten wir die Dinge einfach: ehrliche Arbeit, fairer Service, saubere Ergebnisse – und wir behandeln jedes Zuhause wie unser eigenes.',
     /* WHY CHOOSE US */
     'why.badge'           : 'Warum wir',
     'why.title'           : 'Warum <span class="text-blue">uns wählen</span>',
