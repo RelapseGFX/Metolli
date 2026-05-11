@@ -173,7 +173,7 @@ const T = {
     'footer.start'        : 'Get Started',
     'footer.appt'         : 'Appointments often available<br/>same day.',
     'footer.col4'         : 'Connect',
-    'footer.copy'         : '© 2024 MAM – All rights reserved.',
+    'footer.copy'         : `© ${new Date().getFullYear()} MAM – All rights reserved.`,
     'footer.made'         : 'Made with ♥ by <strong><a href="https://prishtinawebdesign.com/" target="_blank" rel="noopener">Web Prishtina</a></strong>',
   },
 
@@ -345,7 +345,7 @@ const T = {
     'footer.start'        : 'Jetzt starten',
     'footer.appt'         : 'Termine oft noch am<br/>selben Tag verfügbar.',
     'footer.col4'         : 'Verbinden',
-    'footer.copy'         : '© 2024 MAM – Alle Rechte vorbehalten.',
+    'footer.copy'         : `© ${new Date().getFullYear()} MAM – Alle Rechte vorbehalten.`,
     'footer.made'         : 'Mit ♥ gemacht von <strong><a href="https://prishtinawebdesign.com/" target="_blank" rel="noopener">Web Prishtina</a></strong>',
   }
 };
