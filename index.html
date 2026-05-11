@@ -1054,7 +1054,8 @@
     </div>
     <h2 id="modalTitle" class="modal-title">Service anfragen</h2>
     <p id="modal-subtitle" class="modal-subtitle">Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden.</p>
-    <form class="modal-form" novalidate>
+    <form class="modal-form" name="order" method="POST" data-netlify="true" novalidate>
+      <input type="hidden" name="form-name" value="order" />
       <div class="form-row">
         <div class="form-field">
           <label id="mf-name-label" for="mf-name">Vollständiger Name</label>

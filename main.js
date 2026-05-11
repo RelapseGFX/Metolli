@@ -437,20 +437,34 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
 });
 
-/* Modal form submit feedback */
+/* Modal form submit — posts to Netlify Forms */
 const modalForm = document.querySelector('.modal-form');
 modalForm?.addEventListener('submit', e => {
   e.preventDefault();
-  const btn = modalForm.querySelector('button[type=submit]');
+  const btn  = modalForm.querySelector('button[type=submit]');
   const orig = btn.textContent;
-  btn.textContent = 'Sent ✓';
+  btn.textContent = 'Sending…';
   btn.disabled    = true;
-  btn.style.background = '#16a34a';
-  setTimeout(() => {
-    btn.textContent      = orig;
-    btn.disabled         = false;
-    btn.style.background = '';
-    modalForm.reset();
-    closeModal();
-  }, 2000);
+
+  fetch('/', {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body:    new URLSearchParams(new FormData(modalForm)).toString()
+  })
+    .then(() => {
+      btn.textContent      = 'Sent ✓';
+      btn.style.background = '#16a34a';
+      setTimeout(() => {
+        btn.textContent      = orig;
+        btn.disabled         = false;
+        btn.style.background = '';
+        modalForm.reset();
+        closeModal();
+      }, 2000);
+    })
+    .catch(() => {
+      btn.textContent = 'Error — try again';
+      btn.disabled    = false;
+      setTimeout(() => { btn.textContent = orig; }, 3000);
+    });
 });
