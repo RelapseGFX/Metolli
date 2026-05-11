@@ -229,8 +229,8 @@ const T = {
     'about.badge'         : 'Über uns',
     'about.title'         : 'Sanitärinstallationen, denen Sie vertrauen können<br/><span class="text-blue">wenn es darauf ankommt</span>',
     'about.stat'          : 'Notfalldienst',
-    'about.p1'            : 'Für uns war diese Arbeit immer mehr als nur ein Beruf – sie ist seit über 20 Jahren ein Teil unseres Lebens. Gründer Akil begann seine Karriere damit, Badezimmer zu renovieren und Menschen in der Nachbarschaft zu helfen, gemeinsam mit seinem Bruder das Handwerk durch echte praktische Arbeit und lange Tage auf der Baustelle zu erlernen. Später in Deutschland baute er seine Erfahrung weiter aus und absolvierte seine Ausbildung in Heizung · Sanitär · Solartechnik. Nach mehr als 10 Jahren in einem lokalen Betrieb entschied er sich, sein eigenes Unternehmen zu gründen und Kunden in Bretten und der Umgebung zu bedienen.',
-    'about.p2'            : 'Heute halten wir die Dinge einfach: ehrliche Arbeit, fairer Service, saubere Ergebnisse – und wir behandeln jedes Zuhause wie unser eigenes.',
+    'about.p1'            : 'Für uns war diese Arbeit schon immer mehr als nur ein Job – sie ist seit über 20 Jahren ein Teil unseres Lebens. Der Gründer Akil begann seine Karriere damit, gemeinsam mit seinem Bruder Badezimmer zu reparieren und Menschen in der Nachbarschaft zu helfen. Dabei lernte er das Handwerk durch praktische Arbeit und lange Tage auf der Baustelle. Später in Deutschland sammelte er weitere Erfahrungen und schloss seine Ausbildung im Bereich Heizung · Sanitär · Solartechnik ab. Nachdem er mehr als 10 Jahre für ein lokales Unternehmen gearbeitet hatte, beschloss er, sein eigenes Unternehmen zu gründen und Kunden in Bretten und Umgebung zu betreuen.',
+    'about.p2'            : 'Heute halten wir es einfach: ehrliche Arbeit, fairer Service, saubere Ergebnisse und die Einstellung, jedes Haus so zu behandeln, als wäre es unser eigenes.',
     /* WHY CHOOSE US */
     'why.badge'           : 'Warum wir',
     'why.title'           : 'Warum <span class="text-blue">uns wählen</span>',
