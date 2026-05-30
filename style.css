@@ -1548,12 +1548,32 @@ ul  { list-style: none; }
   .logos-grid    { grid-template-columns: repeat(3, 1fr); }
 }
 
+@media (max-width: 1100px) {
+  /* Nav — collapse to hamburger earlier due to larger logo */
+  .nav-center {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 16px; right: 16px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 8px 0;
+    flex-direction: column;
+    z-index: 1001;
+  }
+  .nav-center.open { display: flex; }
+  .nav-links { flex-direction: column; align-items: stretch; }
+  .nav-links li.divider { display: none; }
+  .nav-links a { padding: 12px 20px; }
+  .nav-mobile-toggle { display: flex; }
+}
+
 @media (max-width: 1024px) {
   .container { padding: 0 28px; }
 
-  /* Nav — collapse center on smaller viewports */
-  .nav-logo-zone { width: 200px; }
-  .nav-right     { width: 200px; }
+  .nav-logo-zone { width: auto; }
+  .nav-right     { width: auto; }
 
   .about-layout { grid-template-columns: 1fr; }
   .about-img-lg { height: 380px; }
@@ -1589,28 +1609,9 @@ ul  { list-style: none; }
   .site-header { padding: 12px 16px; }
   .nav-inner { padding: 12px 16px; border-radius: 50px; }
   .nav-logo-zone { width: auto; flex: 1; }
-  .nav-center {
-    display: none;
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 16px; right: 16px;
-    background: var(--white);
-    border-radius: var(--radius);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    padding: 8px 0;
-    flex-direction: column;
-    z-index: 1001;
-  }
-  .nav-center.open {
-    display: flex;
-  }
-  .nav-links { flex-direction: column; align-items: stretch; }
-  .nav-links li.divider { display: none; }
-  .nav-links a { padding: 12px 20px; }
   .nav-right { width: auto; gap: 10px; }
   .nav-right .nav-social { display: none; }
   .nav-cta { padding: 10px 14px; font-size: 12px; }
-  .nav-mobile-toggle { display: flex; }
 
   /* Hero — prevent title overflow, keep content clear of arrows */
   .hero-content { padding: 0 72px; }
