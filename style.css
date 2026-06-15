@@ -1649,7 +1649,7 @@ ul  { list-style: none; }
     gap: 8px;
     width: 100%;
   }
-  .nav-logo-img { max-height: 72px; }
+  .nav-logo-img { height: 72px; max-height: 72px; }
   .nav-cta { padding: 8px 14px; font-size: 12px; flex: 1; justify-content: center; }
 
   /* Hero — prevent title overflow, keep content clear of arrows */
