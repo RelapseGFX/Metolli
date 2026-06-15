@@ -103,6 +103,7 @@ ul  { list-style: none; }
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 500;
+  line-height: 1;
   letter-spacing: 0.02em;
   cursor: pointer;
   border: none;
@@ -153,11 +154,14 @@ ul  { list-style: none; }
   padding: 16px 40px;
   transition: padding 0.4s ease;
 }
-.site-header.scrolled { padding: 10px 40px; }
+.site-header.scrolled {
+  padding: 10px 40px;
+}
 
 .nav-inner {
   max-width: 1920px;
   margin: 0 auto;
+  margin-top: calc(48px + env(safe-area-inset-top));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -247,6 +251,7 @@ ul  { list-style: none; }
   border-radius: 300px;
   font-size: 13px;
   font-weight: 500;
+  line-height: 1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   white-space: nowrap;
