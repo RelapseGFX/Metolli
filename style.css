@@ -186,7 +186,7 @@ ul  { list-style: none; }
 .nav-logo-link { display: flex; align-items: center; }
 .nav-logo-img {
   height: auto;
-  max-height: 72px;
+  max-height: 39px;
   width: auto;
   display: block;
 }
