@@ -328,8 +328,8 @@ function cfValidate(field) {
 form?.addEventListener('submit', e => {
   e.preventDefault();
 
-  /* Validate every interactive field */
-  const fields = [...form.querySelectorAll('input, select, textarea')];
+  /* Validate only required fields (skip hidden inputs and honeypot) */
+  const fields = [...form.querySelectorAll('[required]')];
   const allOk  = fields.map(cfValidate).every(Boolean);
 
   if (!allOk) {
