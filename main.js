@@ -370,6 +370,13 @@ form?.addEventListener('submit', e => {
   });
 });
 
+/* Strip non-numeric characters from phone field (allow digits, spaces, +, -, ()) */
+const phoneInput = document.getElementById('cf-phone-input');
+phoneInput?.addEventListener('input', () => {
+  const cleaned = phoneInput.value.replace(/[^\d\s\-()+]/g, '');
+  if (phoneInput.value !== cleaned) phoneInput.value = cleaned;
+});
+
 /* Live feedback: re-validate on blur, and clear error as soon as field becomes valid */
 form?.querySelectorAll('input, select, textarea').forEach(field => {
   field.addEventListener('blur',   () => cfValidate(field));
