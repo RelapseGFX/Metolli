@@ -418,8 +418,18 @@ document.querySelectorAll('.review-more-btn').forEach(btn => {
 const orderModal  = document.getElementById('orderModal');
 const modalClose  = document.getElementById('modalClose');
 
-function openModal() {
+function openModal(serviceName) {
   orderModal?.classList.add('active');
+  if (serviceName) {
+    setTimeout(() => {
+      const select = document.getElementById('mf-service');
+      if (select) {
+        const opts = [...select.options];
+        const idx = opts.findIndex(o => o.text.toLowerCase() === serviceName.toLowerCase());
+        if (idx > -1) select.selectedIndex = idx;
+      }
+    }, 50);
+  }
   document.body.style.overflow = 'hidden';
 }
 function closeModal() {
@@ -429,7 +439,11 @@ function closeModal() {
 
 /* Open on every "Order a service" link and hero "Request Service" button */
 document.querySelectorAll('.svc-link, .open-modal').forEach(link => {
-  link.addEventListener('click', e => { e.preventDefault(); openModal(); });
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const serviceName = link.closest('.svc-body')?.querySelector('h3')?.textContent.trim();
+    openModal(serviceName);
+  });
 });
 
 modalClose?.addEventListener('click', closeModal);
