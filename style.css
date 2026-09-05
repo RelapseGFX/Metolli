@@ -710,6 +710,103 @@ ul  { list-style: none; }
 }
 
 /* ─────────────────────────────────────────────────────────────
+   STECKBRIEF (FOUNDER)
+───────────────────────────────────────────────────────────── */
+.founder-section { background: var(--light); }
+
+.founder-card {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 56px;
+  align-items: center;
+}
+
+.founder-media {
+  position: relative;
+  max-width: 310px;
+  justify-self: center;
+}
+.founder-media-accent {
+  position: absolute;
+  inset: 24px -20px -20px 24px;
+  background: var(--blue);
+  border-radius: var(--radius);
+  z-index: 0;
+}
+.founder-photo {
+  position: relative;
+  z-index: 1;
+  width: 310px;
+  height: 465px;
+  object-fit: cover;
+  object-position: center 32%;
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.14);
+}
+
+.founder-badge { margin-bottom: 20px; }
+
+.founder-role {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+
+.founder-name {
+  font-family: var(--font-head);
+  font-size: clamp(30px, 3vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--dark);
+  margin-bottom: 28px;
+}
+
+.founder-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.founder-facts li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  color: var(--dark);
+}
+.founder-facts a { transition: color 0.18s; }
+.founder-facts a:hover { color: var(--blue); }
+
+.founder-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  color: var(--blue);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.founder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+@media (max-width: 1024px) {
+  .founder-card { grid-template-columns: 1fr; gap: 40px; }
+  .founder-media-accent { inset: 16px -14px -14px 16px; }
+  .founder-photo { height: 420px; }
+}
+
+/* ─────────────────────────────────────────────────────────────
    LOGOS — 3×2 GRID
 ───────────────────────────────────────────────────────────── */
 .logos-section {

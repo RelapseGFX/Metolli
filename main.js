@@ -238,7 +238,7 @@ if (track) {
 /* ── SCROLL REVEAL ── */
 const revealEls = document.querySelectorAll(
   '.service-card, .project-item:not(.clone), .why-feat-card, .review-card, ' +
-  '.faq-item, .about-stat-badge, .how-row, .logo-box'
+  '.faq-item, .about-stat-badge, .how-row, .logo-box, .founder-card'
 );
 
 // Stagger siblings for grid sections

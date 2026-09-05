@@ -59,6 +59,10 @@ const T = {
     'about.stat'          : 'Emergency Service',
     'about.p1'            : "For us, this work has always been more than just a job like it's been a part of our life for over 20 years. The founder Akil started his career fixing bathrooms and helping people around the neighborhood alongside his brother, learning the trade through real hands-on work and long days on site. Later on in Germany, he continued building his experience and completed his vocational training (Ausbildung) in Heizung · Sanitär · Solartechnik. After spending more than 10 years working for a local company, he decided it was time to start his own business and serve customers in Bretten and the surrounding areas.",
     'about.p2'            : "Today, we keep things simple: honest work, fair service, clean results, and treating every home like it's our own.",
+    /* FOUNDER / STECKBRIEF */
+    'founder.badge'       : 'Owner Profile',
+    'founder.role'        : 'Owner',
+    'founder.call'        : 'Call now',
     /* WHY CHOOSE US */
     'why.badge'           : 'Why Choose Us',
     'why.title'           : 'Why <span class="text-blue">Choose Us</span>',
@@ -231,6 +235,10 @@ const T = {
     'about.stat'          : 'Notfalldienst',
     'about.p1'            : 'Für uns war diese Arbeit schon immer mehr als nur ein Job. Sie ist seit über 20 Jahren ein Teil unseres Lebens. Der Gründer Akil begann seine Karriere damit, gemeinsam mit seinem Bruder Badezimmer zu reparieren und Menschen in der Nachbarschaft zu helfen. Dabei lernte er das Handwerk durch praktische Arbeit und lange Tage auf der Baustelle. Später in Deutschland sammelte er weitere Erfahrungen und schloss seine Ausbildung im Bereich Heizung · Sanitär · Solartechnik ab. Nachdem er mehr als 10 Jahre für ein lokales Unternehmen gearbeitet hatte, beschloss er, sein eigenes Unternehmen zu gründen und Kunden in Bretten und Umgebung zu betreuen.',
     'about.p2'            : 'Heute halten wir es einfach: ehrliche Arbeit, fairer Service, saubere Ergebnisse und die Einstellung, jedes Haus so zu behandeln, als wäre es unser eigenes.',
+    /* FOUNDER / STECKBRIEF */
+    'founder.badge'       : 'Steckbrief',
+    'founder.role'        : 'Unternehmer',
+    'founder.call'        : 'Jetzt anrufen',
     /* WHY CHOOSE US */
     'why.badge'           : 'Warum wir',
     'why.title'           : 'Warum <span class="text-blue">uns wählen</span>',
@@ -424,6 +432,11 @@ const BINDINGS = [
   ['#about .stat-service',                      't', 'about.stat'],
   ['#about .about-left p:nth-of-type(1)',        't', 'about.p1'],
   ['#about .about-left p:nth-of-type(2)',        't', 'about.p2'],
+
+  /* FOUNDER / STECKBRIEF */
+  ['#founder-badge-text',                       't', 'founder.badge'],
+  ['#founder-role',                             't', 'founder.role'],
+  ['#founder-call-btn',                         't', 'founder.call'],
 
   /* WHY CHOOSE US */
   ['.why-section .section-badge span',          't', 'why.badge'],
