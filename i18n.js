@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════
    i18n.js — EN / DE language switcher
-   MAM Haustechnik
+   Metolli SHK
 ══════════════════════════════════════════════ */
 
 /* ─── Translation dictionary ─── */
@@ -125,7 +125,7 @@ const T = {
     'con.badge'           : 'Contact',
     'con.title'           : 'Get In Touch',
     'con.phone'           : '<strong>Phone:</strong> <a href="tel:+491785086146">+49 178 5086146</a>',
-    'con.email'           : '<strong>Email:</strong> <a href="mailto:info@mam-haustechnik.de">info@mam-haustechnik.de</a>',
+    'con.email'           : '<strong>Email:</strong> <a href="mailto:info@MetolliSHK.de">info@MetolliSHK.de</a>',
     'con.address'         : '<strong>Address:</strong> Wannenweg 6, 75015 Bretten',
     'con.hours'           : '<strong>Hours:</strong> 24/7 Emergency Service',
     'form.name.label'     : 'Full Name',
@@ -177,7 +177,7 @@ const T = {
     'footer.start'        : 'Get Started',
     'footer.appt'         : 'Appointments often available<br/>same day.',
     'footer.col4'         : 'Connect',
-    'footer.copy'         : `© ${new Date().getFullYear()} MAM – All rights reserved.`,
+    'footer.copy'         : `© ${new Date().getFullYear()} Metolli SHK – All rights reserved.`,
     'footer.made'         : 'Made with ♥ by <strong><a href="https://prishtinawebdesign.com/" target="_blank" rel="noopener">Web Prishtina</a></strong>',
   },
 
@@ -301,7 +301,7 @@ const T = {
     'con.badge'           : 'Kontakt',
     'con.title'           : 'Kontakt aufnehmen',
     'con.phone'           : '<strong>Telefon:</strong> <a href="tel:+491785086146">+49 178 5086146</a>',
-    'con.email'           : '<strong>E-Mail:</strong> <a href="mailto:info@mam-haustechnik.de">info@mam-haustechnik.de</a>',
+    'con.email'           : '<strong>E-Mail:</strong> <a href="mailto:info@MetolliSHK.de">info@MetolliSHK.de</a>',
     'con.address'         : '<strong>Adresse:</strong> Wannenweg 6, 75015 Bretten',
     'con.hours'           : '<strong>Öffnungszeiten:</strong> 24/7 Notfalldienst',
     'form.name.label'     : 'Vollständiger Name',
@@ -353,7 +353,7 @@ const T = {
     'footer.start'        : 'Jetzt starten',
     'footer.appt'         : 'Termine oft noch am<br/>selben Tag verfügbar.',
     'footer.col4'         : 'Verbinden',
-    'footer.copy'         : `© ${new Date().getFullYear()} MAM – Alle Rechte vorbehalten.`,
+    'footer.copy'         : `© ${new Date().getFullYear()} Metolli SHK – Alle Rechte vorbehalten.`,
     'footer.made'         : 'Mit ♥ gemacht von <strong><a href="https://prishtinawebdesign.com/" target="_blank" rel="noopener">Web Prishtina</a></strong>',
   }
 };
