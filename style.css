@@ -1048,7 +1048,7 @@ ul  { list-style: none; }
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-50%) scale(0) rotate(-180deg);
+  transform: translateY(-50%) scale(0) rotate(-90deg);
   transform-origin: center center;
   transition: opacity 0.3s ease, transform 0.35s ease;
   z-index: 2;
