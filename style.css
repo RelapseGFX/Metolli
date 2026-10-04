@@ -965,6 +965,7 @@ ul  { list-style: none; }
    The huge gap between number and content is where the float image lives —
    nothing moves, nothing shifts. */
 .how-row {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1032,25 +1033,33 @@ ul  { list-style: none; }
 /* ── Floating image — absolutely positioned in the gap between
    number box and content. Never part of the flow so text is
    completely static. JS updates top + src on each row hover. ── */
+.how-row {
+  overflow: visible;       /* let float image grow outside the 130px row height */
+}
+
+/* Float image lives inside each row, centred in the gap */
 .how-float-img {
   position: absolute;
-  left: 360px;             /* just after the 72px number box + 16px breathing room */
-  top: 0;                 /* JS writes per-row value                               */
+  left: 360px;
+  top: 50%;
   width: 180px;
   height: 240px;
   border-radius: var(--radius);
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
-  transform: scale(0);
+  transform: translateY(-50%) scale(0) rotate(-12deg);
   transform-origin: center center;
-  transition: opacity 0.28s ease, top 0.22s ease, transform 0.28s ease;
+  transition: opacity 0.3s ease, transform 0.35s ease;
   z-index: 2;
 }
 @media (max-width: 1024px) {
   .how-float-img { display: none; }
 }
-.how-float-img.visible { opacity: 1; transform: scale(1); }
+.how-row:hover .how-float-img {
+  opacity: 1;
+  transform: translateY(-50%) scale(1) rotate(0deg);
+}
 .how-float-img img {
   width: 100%;
   height: 100%;

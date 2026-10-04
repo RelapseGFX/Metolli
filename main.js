@@ -203,37 +203,6 @@ if (track) {
   });
 }
 
-/* ── HOW IT WORKS — floating image on row hover ── */
-(function () {
-  const rowsEl   = document.getElementById('howRows');
-  const floatEl  = document.getElementById('howFloatImg');
-  const imgEl    = document.getElementById('howFloatImgEl');
-  if (!rowsEl || !floatEl || !imgEl) return;
-
-  const FLOAT_H = 240; // matches CSS height
-
-  document.querySelectorAll('.how-row').forEach(row => {
-    row.addEventListener('mouseenter', () => {
-      const src = row.dataset.img;
-      if (!src) return;
-
-      // swap image src only when it changes to avoid a flicker
-      if (imgEl.src !== src) imgEl.src = src;
-
-      // vertically centre the float image on the hovered row
-      const rowRect      = row.getBoundingClientRect();
-      const containerRect = rowsEl.getBoundingClientRect();
-      const centreY      = rowRect.top - containerRect.top + rowRect.height / 2;
-      floatEl.style.top  = `${centreY - FLOAT_H / 2}px`;
-
-      floatEl.classList.add('visible');
-    });
-
-    row.addEventListener('mouseleave', () => {
-      floatEl.classList.remove('visible');
-    });
-  });
-})();
 
 /* ── SCROLL REVEAL ── */
 const revealEls = document.querySelectorAll(
