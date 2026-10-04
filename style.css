@@ -1048,12 +1048,19 @@ ul  { list-style: none; }
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-50%) scale(0) rotate(-12deg);
+  transform: translateY(-50%) scale(0) rotate(-180deg);
   transform-origin: center center;
   transition: opacity 0.3s ease, transform 0.35s ease;
   z-index: 2;
 }
-@media (max-width: 1024px) {
+/* Text elements always render above the float image */
+.how-row-body,
+.how-drop-icon {
+  position: relative;
+  z-index: 3;
+}
+/* Hide below 1400px — gap is too narrow for the image to clear the text */
+@media (max-width: 1400px) {
   .how-float-img { display: none; }
 }
 .how-row:hover .how-float-img {
